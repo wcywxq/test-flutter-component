@@ -1,10 +1,11 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; 
 import 'package:app/demo/drawer_demo.dart';
 import 'package:app/demo/list_view_demo.dart';
 import 'package:app/demo/bottom_navigation_bar_demo.dart';
 import 'package:app/demo/basic_demo.dart';
 import 'package:app/demo/layout_demo.dart';
 import 'package:app/demo/view_demo.dart';
+import 'package:app/demo/sliver_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,6 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // 隐藏右上角 debug
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -26,7 +29,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
@@ -54,6 +57,7 @@ class Home extends StatelessWidget {
               Tab(icon: Icon(Icons.change_history)),
               Tab(icon: Icon(Icons.directions_bike)),
               Tab(icon: Icon(Icons.view_quilt)),
+              Tab(icon: Icon(Icons.access_alarm)),
             ],
           ),
         ),
@@ -63,6 +67,7 @@ class Home extends StatelessWidget {
             BasicDemo(),
             LayoutDemo(),
             ViewDemo(),
+            SliverDemo(),
             // Icon(Icons.local_florist, size: 128.0, color: Colors.black12),
             // Icon(Icons.change_history, size: 128.0, color: Colors.black12),
             // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12)
