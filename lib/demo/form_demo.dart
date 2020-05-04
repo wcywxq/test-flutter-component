@@ -55,7 +55,7 @@ class _RegisterFormState extends State<RegisterForm> {
       Scaffold.of(context).showSnackBar(
         SnackBar(
           content: Text('Registering...'),
-        )
+        ),
       );
     } else {
       setState(() {
