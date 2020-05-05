@@ -8,6 +8,7 @@ import 'package:app/demo/view_demo.dart';
 import 'package:app/demo/sliver_demo.dart';
 import 'package:app/demo/navigator_demo.dart';
 import 'package:app/demo/form_demo.dart';
+import 'package:app/demo/material_component.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,11 +25,12 @@ class MyApp extends StatelessWidget {
         accentColor: Color.fromRGBO(3, 54, 255, 1.0),
       ),
       // home: NavigatorDemo(),
-      initialRoute: '/form',
+      initialRoute: '/mdc',
       routes: {
         '/': (BuildContext context) => Home(),
         '/about': (BuildContext context) => Page(title: 'About'),
         '/form': (BuildContext context) => FormDemo(),
+        '/mdc': (BuildContext context) => MaterialComponents(),
       },
     );
   }
