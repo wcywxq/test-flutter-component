@@ -7,6 +7,12 @@ import 'package:app/demo/check_box_demo.dart';
 import 'package:app/demo/radio_demo.dart';
 import 'package:app/demo/switch_demo.dart';
 import 'package:app/demo/silder_demo.dart';
+import 'package:app/demo/datetime_demo.dart';
+import 'package:app/demo/simple_dialog_demo.dart';
+import 'package:app/demo/alert_dialog_demo.dart';
+import 'package:app/demo/bottom_sheet_demo.dart';
+import 'package:app/demo/snack_bar_demo.dart';
+import 'package:app/demo/expansion_panel_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -49,6 +55,30 @@ class MaterialComponents extends StatelessWidget {
           ListItem(
             title: 'Slider',
             page: SliderDemo(),
+          ),
+          ListItem(
+            title: 'Datetime',
+            page: DatetimeDemo(),
+          ),
+          ListItem(
+            title: 'SimpleDialog',
+            page: SimpleDialogDemo(),
+          ),
+          ListItem(
+            title: 'AlertDialog',
+            page: AlertDialogDemo(),
+          ),
+          ListItem(
+            title: 'BottomSheet',
+            page: BottomSheetDemo(),
+          ),
+          ListItem(
+            title: 'SnackBar',
+            page: SnackBarDemo(),
+          ),
+          ListItem(
+            title: 'ExpansionPanel',
+            page: ExpansionPanelDemo(),
           ),
         ],
       ),
