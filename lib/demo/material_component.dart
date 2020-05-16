@@ -1,3 +1,7 @@
+import 'package:app/demo/stepper_demo.dart';
+import 'package:app/demo/card_demo.dart';
+import 'package:app/demo/paginated_data_table_demo.dart';
+import 'package:app/demo/data_table_demo.dart';
 import 'package:app/demo/chip_demo.dart';
 import 'package:app/demo/expansion_panel_demo.dart';
 import 'package:app/demo/snack_bar_demo.dart';
@@ -15,6 +19,7 @@ import 'package:app/demo/floating_action_button_demo.dart';
 import 'package:app/demo/button_demo.dart';
 import 'package:flutter/material.dart';
 
+
 class MaterialComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -26,64 +31,80 @@ class MaterialComponents extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           ListItem(
-            title: 'Button',
+            title: 'Button 按钮',
             page: ButtonDemo(),
           ),
           ListItem(
-            title: 'FloatingActionButton',
+            title: 'FloatingActionButton 底部按钮',
             page: FloatActionButtonDemo(),
           ),
           ListItem(
-            title: 'PopupMenuButton',
+            title: 'PopupMenuButton 弹出菜单',
             page: PopupMenuButtonDemo(),
           ),
           ListItem(
-            title: 'Form',
+            title: 'Form 表单',
             page: FormDemo(),
           ),
           ListItem(
-            title: 'CheckBox',
+            title: 'CheckBox 多选框',
             page: CheckboxDemo(),
           ),
           ListItem(
-            title: 'Radio',
+            title: 'Radio 单选框',
             page: RadioDemo(),
           ),
           ListItem(
-            title: 'Switch',
+            title: 'Switch 开关',
             page: SwitchDemo(),
           ),
           ListItem(
-            title: 'Slider',
+            title: 'Slider 滑块',
             page: SliderDemo(),
           ),
           ListItem(
-            title: 'Datetime',
+            title: 'Datetime 时间选择器',
             page: DatetimeDemo(),
           ),
           ListItem(
-            title: 'SimpleDialog',
+            title: 'SimpleDialog 简单弹窗',
             page: SimpleDialogDemo(),
           ),
           ListItem(
-            title: 'AlertDialog',
+            title: 'AlertDialog 弹窗',
             page: AlertDialogDemo(),
           ),
           ListItem(
-            title: 'BottomSheet',
+            title: 'BottomSheet 底部弹窗',
             page: BottomSheetDemo(),
           ),
           ListItem(
-            title: 'SnackBar',
+            title: 'SnackBar 底部提示框',
             page: SnackBarDemo(),
           ),
           ListItem(
-            title: 'ExpansionPanel',
+            title: 'ExpansionPanel 折叠面板',
             page: ExpansionPanelDemo(),
           ),
           ListItem(
-            title: 'Chip',
+            title: 'Chip 标签',
             page: ChipDemo(),
+          ),
+          ListItem(
+            title: 'DataTable 表格',
+            page: DataTableDemo(),
+          ),
+          ListItem(
+            title: 'PaginatedDataTable 分页表格',
+            page: PaginatedDataTableDemo(),
+          ),
+          ListItem(
+            title: 'Card 卡片',
+            page: CardDemo(),
+          ),
+          ListItem(
+            title: 'Stepper 步骤条',
+            page: StepperDemo(),
           ),
         ],
       ),
