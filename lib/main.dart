@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
 import 'package:app/demo/drawer_demo.dart';
 import 'package:app/demo/list_view_demo.dart';
 import 'package:app/demo/bottom_navigation_bar_demo.dart';
@@ -9,6 +9,7 @@ import 'package:app/demo/sliver_demo.dart';
 import 'package:app/demo/navigator_demo.dart';
 import 'package:app/demo/form_demo.dart';
 import 'package:app/demo/material_component.dart';
+import 'package:app/demo/state/view_list.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,12 +26,13 @@ class MyApp extends StatelessWidget {
         accentColor: Color.fromRGBO(3, 54, 255, 1.0),
       ),
       // home: NavigatorDemo(),
-      initialRoute: '/mdc',
+      initialRoute: '/state-view',
       routes: {
         '/': (BuildContext context) => Home(),
         '/about': (BuildContext context) => Page(title: 'About'),
         '/form': (BuildContext context) => FormDemo(),
         '/mdc': (BuildContext context) => MaterialComponents(),
+        '/state-view': (BuildContext context) => ViewList(),
       },
     );
   }
