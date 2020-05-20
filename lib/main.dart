@@ -11,6 +11,7 @@ import 'package:app/demo/form_demo.dart';
 import 'package:app/demo/material_component.dart';
 import 'package:app/demo/state/view_list.dart';
 import 'package:app/demo/stream/stream_demo.dart';
+import 'package:app/demo/rxdart/rxdart_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         accentColor: Color.fromRGBO(3, 54, 255, 1.0),
       ),
       // home: NavigatorDemo(),
-      initialRoute: '/stream',
+      initialRoute: '/rxDart',
       routes: {
         '/': (BuildContext context) => Home(),
         '/about': (BuildContext context) => Page(title: 'About'),
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         '/mdc': (BuildContext context) => MaterialComponents(),
         '/state-view': (BuildContext context) => ViewList(),
         '/stream': (BuildContext context) => StreamDemo(),
+        '/rxDart': (BuildContext context) => RxDartDemo(),
       },
     );
   }
