@@ -10,6 +10,7 @@ import 'package:app/demo/navigator_demo.dart';
 import 'package:app/demo/form_demo.dart';
 import 'package:app/demo/material_component.dart';
 import 'package:app/demo/state/view_list.dart';
+import 'package:app/demo/stream/stream_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,13 +27,14 @@ class MyApp extends StatelessWidget {
         accentColor: Color.fromRGBO(3, 54, 255, 1.0),
       ),
       // home: NavigatorDemo(),
-      initialRoute: '/state-view',
+      initialRoute: '/stream',
       routes: {
         '/': (BuildContext context) => Home(),
         '/about': (BuildContext context) => Page(title: 'About'),
         '/form': (BuildContext context) => FormDemo(),
         '/mdc': (BuildContext context) => MaterialComponents(),
         '/state-view': (BuildContext context) => ViewList(),
+        '/stream': (BuildContext context) => StreamDemo(),
       },
     );
   }
