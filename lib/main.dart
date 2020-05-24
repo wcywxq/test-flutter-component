@@ -13,6 +13,7 @@ import 'package:app/demo/state/view_list.dart';
 import 'package:app/demo/stream/stream_demo.dart';
 import 'package:app/demo/rxdart/rxdart_demo.dart';
 import 'package:app/demo/bloc/bloc_demo.dart';
+import 'package:app/demo/http/http_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         accentColor: Color.fromRGBO(3, 54, 255, 1.0),
       ),
       // home: NavigatorDemo(),
-      initialRoute: '/bloc',
+      initialRoute: '/http',
       routes: {
         '/': (BuildContext context) => Home(),
         '/about': (BuildContext context) => Page(title: 'About'),
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         '/stream': (BuildContext context) => StreamDemo(),
         '/rxDart': (BuildContext context) => RxDartDemo(),
         '/bloc': (BuildContext context) => BlocDemo(),
+        '/http': (BuildContext context) => HttpDemo(),
       },
     );
   }
