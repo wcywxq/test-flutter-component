@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:app/demo/drawer_demo.dart';
 import 'package:app/demo/list_view_demo.dart';
 import 'package:app/demo/bottom_navigation_bar_demo.dart';
@@ -15,6 +16,9 @@ import 'package:app/demo/rxdart/rxdart_demo.dart';
 import 'package:app/demo/bloc/bloc_demo.dart';
 import 'package:app/demo/http/http_demo.dart';
 import 'package:app/demo/animation/animation.dart';
+import 'package:app/demo/i18n/i18n_demo.dart';
+// import 'package:app/demo/i18n/map/ninghao_demo_localizations.dart';
+import 'package:app/demo/i18n/intl/ninghao_demo_localizations.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,6 +26,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // locale: Locale('zh', 'CN'), // 设置本地化语言，locale 实际是 Localizations 中所需要的值
+      // localeResolutionCallback 决定当前应用所使用的语言，supportedLocales 应用支持的本地化列表
+      localeResolutionCallback: (Locale locale, Iterable<Locale> supportedLocales) {
+        return Locale('en', 'US');
+      } ,
+      localizationsDelegates: [
+        NinghaoDemoLocalizationsDelegate(), // 自定义的 LocalizationsDelegate，用来加载本地化资源
+        GlobalMaterialLocalizations.delegate, // 提供应用中 Material 组件本地化的字符串 
+        GlobalWidgetsLocalizations.delegate, // 定义了 Widget 默认的文字方向
+      ],
+      supportedLocales: [
+        Locale('en', 'US'), // 第一个参数：语言，第二个参数：地区
+        Locale('zh', 'CN'),
+
+      ],
       // 隐藏右上角 debug
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -31,7 +50,7 @@ class MyApp extends StatelessWidget {
         accentColor: Color.fromRGBO(3, 54, 255, 1.0),
       ),
       // home: NavigatorDemo(),
-      initialRoute: '/animation',
+      initialRoute: '/i18n',
       routes: {
         '/': (BuildContext context) => Home(),
         '/about': (BuildContext context) => Page(title: 'About'),
@@ -43,6 +62,7 @@ class MyApp extends StatelessWidget {
         '/bloc': (BuildContext context) => BlocDemo(),
         '/http': (BuildContext context) => HttpDemo(),
         '/animation': (BuildContext context) => AnimationDemo(),
+        '/i18n': (BuildContext context) => I18nDemo(),
       },
     );
   }
@@ -102,3 +122,5 @@ class Home extends StatelessWidget {
     );
   }
 }
+
+// ios 需要打开 xcode，配置最后一项为 Localizations
