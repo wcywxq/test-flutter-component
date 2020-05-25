@@ -7,14 +7,42 @@ class TestDemo extends StatelessWidget {
       appBar: AppBar(
         title: Text('TestDemo'),
       ),
-      body: null,
+      body: TestDemoHome(),
+    );
+  }
+}
+
+class TestDemoHome extends StatefulWidget {
+  @override
+  _TestDemoHomeState createState() => _TestDemoHomeState();
+}
+
+class _TestDemoHomeState extends State<TestDemoHome> {
+  int count = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Chip(
+          label: Text('hello'),
+        ),
+        ActionChip(
+          label: Text('$count'),
+          onPressed: () {
+            setState(() {
+              count++;
+            });
+          },
+        ),
+      ],
     );
   }
 }
 
 class NinghaoTestDemo {
   static greet(String name) {
-     return 'hello $name';
+    return 'hello $name';
   }
 }
 
