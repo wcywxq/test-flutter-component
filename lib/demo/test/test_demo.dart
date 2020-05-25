@@ -27,8 +27,10 @@ class _TestDemoHomeState extends State<TestDemoHome> {
         Chip(
           label: Text('hello'),
         ),
+        // key，测试时可以定位到具体的小部件
         ActionChip(
-          label: Text('$count'),
+          key: Key('actionChip'),
+          label: Text('$count', key: Key('actionChipLabelText')),
           onPressed: () {
             setState(() {
               count++;
