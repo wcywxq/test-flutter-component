@@ -19,6 +19,7 @@ import 'package:app/demo/animation/animation.dart';
 import 'package:app/demo/i18n/i18n_demo.dart';
 // import 'package:app/demo/i18n/map/ninghao_demo_localizations.dart';
 import 'package:app/demo/i18n/intl/ninghao_demo_localizations.dart';
+import 'package:app/demo/test/test_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -63,6 +64,7 @@ class MyApp extends StatelessWidget {
         '/http': (BuildContext context) => HttpDemo(),
         '/animation': (BuildContext context) => AnimationDemo(),
         '/i18n': (BuildContext context) => I18nDemo(),
+        '/test': (BuildContext context) => TestDemo(),
       },
     );
   }
