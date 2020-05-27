@@ -26,8 +26,18 @@ import 'package:app/demo/provider/provider_demo.dart';
 
 void main() => runApp(
       MultiProvider(
+        // Provider<Counter>(create: (_) => Counter()),
+        // Consumer<Counter>(
+        //   builder: (BuildContext context, Counter counter, Widget child) =>
+        //       Provider.value(value: counter.count, child: child),
+        // ),
         providers: [
-          ChangeNotifierProvider(create: (_) => Counter()),
+          // ChangeNotifierProvider(create: (_) => Counter()),
+          ChangeNotifierProvider<Counter>(create: (_) => Counter()),
+          ChangeNotifierProvider<Counter1>(create: (_) => Counter1()),
+          // Provider<Something>(create: (_) => Something()),
+          // Provider<SomethingElse>(create: (_) => SomethingElse()),
+          // Provider<AnotherThing>(create: (_) => AnotherThing()),
         ],
         child: MyApp(),
       ),
