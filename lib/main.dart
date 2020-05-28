@@ -24,6 +24,7 @@ import 'package:app/demo/test/test_demo.dart';
 import 'package:provider/provider.dart';
 import 'package:app/demo/provider/provider_demo.dart';
 
+// GestureDetector 手势检测，可以包裹子Widget
 void main() => runApp(
       MultiProvider(
         // Provider<Counter>(create: (_) => Counter()),
